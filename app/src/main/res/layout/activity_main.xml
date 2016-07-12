@@ -10,7 +10,86 @@
     tools:context="com.trifork.ckp.androidmutationtesting.MainActivity">
 
     <TextView
+        android:id="@+id/label_angle_a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="@string/label_angle_a"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekbar_angle_a"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/label_angle_a"
+        android:layout_toStartOf="@+id/value_angle_a"
+        android:max="100"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="0"
+        android:textStyle="bold"
+        android:id="@+id/value_angle_a"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        />
+
+    <TextView
+        android:id="@+id/label_angle_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_angle_b"
+        android:layout_below="@+id/label_angle_a"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekbar_angle_b"
+        android:layout_alignTop="@+id/label_angle_b"
+        android:layout_toEndOf="@+id/label_angle_b"
+        android:layout_toStartOf="@+id/value_angle_b"
+        android:max="100"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="0"
+        android:textStyle="bold"
+        android:id="@+id/value_angle_b"
+        android:layout_alignTop="@+id/seekbar_angle_b"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        />
+
+    <TextView
+        android:id="@+id/label_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/label_result"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/seekbar_angle_b"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:text="A"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:layout_alignTop="@+id/label_result"
+        android:layout_toEndOf="@+id/label_result" />
+
 </RelativeLayout>
