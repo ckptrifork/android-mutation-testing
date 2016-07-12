@@ -7,13 +7,17 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Constants
+    private static final int INITIAL_DEGREES_ANGLE_A = 50;
+    private static final int INITIAL_DEGREES_ANGLE_B = 100;
+
     // Views
     private SeekBar seekbarAngleA, seekbarAngleB;
     private TextView valueAngleA, valueAngleB, result;
 
     // Model
-    private Angle angleA = new Angle(50);
-    private Angle angleB = new Angle(100);
+    private Angle angleA = new Angle(INITIAL_DEGREES_ANGLE_A);
+    private Angle angleB = new Angle(INITIAL_DEGREES_ANGLE_B);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void defineViewBehaviour() {
-        seekbarAngleA.setProgress(50);
-        seekbarAngleB.setProgress(100);
-        valueAngleA.setText(Integer.toString(50));
-        valueAngleB.setText(Integer.toString(100));
+        seekbarAngleA.setProgress(INITIAL_DEGREES_ANGLE_A);
+        seekbarAngleB.setProgress(INITIAL_DEGREES_ANGLE_B);
+        valueAngleA.setText(Integer.toString(INITIAL_DEGREES_ANGLE_A));
+        valueAngleB.setText(Integer.toString(INITIAL_DEGREES_ANGLE_B));
 
         seekbarAngleA.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
