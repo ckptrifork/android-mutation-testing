@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int INITIAL_DEGREES_ANGLE_B = 100;
 
     // Views
-    private SeekBar seekbarAngleA, seekbarAngleB;
+    private SeekBar seekBarAngleA, seekBarAngleB;
     private TextView valueAngleA, valueAngleB, result;
 
     // Model
@@ -28,20 +28,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void obtainViewReferences() {
-        seekbarAngleA = (SeekBar) findViewById(R.id.seekbar_angle_a);
-        seekbarAngleB = (SeekBar) findViewById(R.id.seekbar_angle_b);
+        seekBarAngleA = (SeekBar) findViewById(R.id.seekbar_angle_a);
+        seekBarAngleB = (SeekBar) findViewById(R.id.seekbar_angle_b);
         valueAngleA = (TextView) findViewById(R.id.value_angle_a);
         valueAngleB = (TextView) findViewById(R.id.value_angle_b);
         result = (TextView) findViewById(R.id.result);
     }
 
     private void defineViewBehaviour() {
-        seekbarAngleA.setProgress(INITIAL_DEGREES_ANGLE_A);
-        seekbarAngleB.setProgress(INITIAL_DEGREES_ANGLE_B);
+        seekBarAngleA.setProgress(INITIAL_DEGREES_ANGLE_A);
+        seekBarAngleB.setProgress(INITIAL_DEGREES_ANGLE_B);
         valueAngleA.setText(Integer.toString(INITIAL_DEGREES_ANGLE_A));
         valueAngleB.setText(Integer.toString(INITIAL_DEGREES_ANGLE_B));
 
-        seekbarAngleA.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        seekBarAngleA.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 valueAngleA.setText(Integer.toString(progress));
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        seekbarAngleB.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        seekBarAngleB.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 valueAngleB.setText(Integer.toString(progress));
