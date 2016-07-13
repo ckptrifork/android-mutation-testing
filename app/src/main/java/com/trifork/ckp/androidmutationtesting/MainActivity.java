@@ -50,14 +50,10 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
+            public void onStartTrackingTouch(SeekBar seekBar) {}
 
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
+            public void onStopTrackingTouch(SeekBar seekBar) {}
         });
 
         seekBarAngleB.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -69,14 +65,10 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
+            public void onStartTrackingTouch(SeekBar seekBar) {}
 
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
+            public void onStopTrackingTouch(SeekBar seekBar) {}
         });
 
         calculateResult();
