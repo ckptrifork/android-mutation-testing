@@ -22,7 +22,8 @@ The app consists of a single Activity with two `SeekBar`s each representing an a
 
 `pitest` Gradle tasks will be created for each build variant. To run the task for all the variants (_debug_ and _release_) type the following on the command line:
 
-```$ ./gradlew pitest
+```
+$ ./gradlew pitest
 ```
 
 HTML reports will be placed in the `/app/build/reports/pitest/` directory. For more information see the [README for the gradle-pitest-plugin](https://github.com/koral--/gradle-pitest-plugin/blob/master/README.md).
