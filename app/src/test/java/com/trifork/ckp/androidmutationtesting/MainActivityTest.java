@@ -15,7 +15,7 @@ import static org.hamcrest.Matchers.isEmptyString;
 import static org.junit.Assert.*;
 
 @RunWith(RobolectricGradleTestRunner.class)
-@Config(constants = BuildConfig.class)
+@Config(constants = BuildConfig.class, sdk = 22)
 public class MainActivityTest {
 
     private SeekBar seekBarAngleA, seekBarAngleB;
