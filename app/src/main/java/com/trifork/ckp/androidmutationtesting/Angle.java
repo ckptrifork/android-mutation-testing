@@ -1,6 +1,6 @@
 package com.trifork.ckp.androidmutationtesting;
 
-public final class Angle {
+final class Angle {
 
     private final int degrees;
 

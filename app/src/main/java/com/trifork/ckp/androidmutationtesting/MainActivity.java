@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     // Constants
@@ -28,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void obtainViewReferences() {
-        seekBarAngleA = (SeekBar) findViewById(R.id.seekbar_angle_a);
-        seekBarAngleB = (SeekBar) findViewById(R.id.seekbar_angle_b);
+        seekBarAngleA = (SeekBar) findViewById(R.id.seek_bar_angle_a);
+        seekBarAngleB = (SeekBar) findViewById(R.id.seek_bar_angle_b);
         valueAngleA = (TextView) findViewById(R.id.value_angle_a);
         valueAngleB = (TextView) findViewById(R.id.value_angle_b);
         result = (TextView) findViewById(R.id.result);
@@ -38,13 +40,13 @@ public class MainActivity extends AppCompatActivity {
     private void defineViewBehaviour() {
         seekBarAngleA.setProgress(INITIAL_DEGREES_ANGLE_A);
         seekBarAngleB.setProgress(INITIAL_DEGREES_ANGLE_B);
-        valueAngleA.setText(Integer.toString(INITIAL_DEGREES_ANGLE_A));
-        valueAngleB.setText(Integer.toString(INITIAL_DEGREES_ANGLE_B));
+        valueAngleA.setText(String.format(Locale.US, "%d", INITIAL_DEGREES_ANGLE_A));
+        valueAngleB.setText(String.format(Locale.US, "%d", INITIAL_DEGREES_ANGLE_B));
 
         seekBarAngleA.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                valueAngleA.setText(Integer.toString(progress));
+                valueAngleA.setText(String.format(Locale.US, "%d", progress));
                 angleA = new Angle(progress);
                 calculateResult();
             }
@@ -59,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         seekBarAngleB.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                valueAngleB.setText(Integer.toString(progress));
+                valueAngleB.setText(String.format(Locale.US, "%d", progress));
                 angleB = new Angle(progress);
                 calculateResult();
             }

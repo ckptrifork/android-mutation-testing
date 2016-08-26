@@ -21,7 +21,7 @@
     <SeekBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/seekbar_angle_a"
+        android:id="@+id/seek_bar_angle_a"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/label_angle_a"
         android:layout_toStartOf="@+id/value_angle_a"
@@ -52,7 +52,7 @@
     <SeekBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/seekbar_angle_b"
+        android:id="@+id/seek_bar_angle_b"
         android:layout_alignTop="@+id/label_angle_b"
         android:layout_toEndOf="@+id/label_angle_b"
         android:layout_toStartOf="@+id/value_angle_b"
@@ -65,7 +65,7 @@
         tools:text="0"
         android:textStyle="bold"
         android:id="@+id/value_angle_b"
-        android:layout_alignTop="@+id/seekbar_angle_b"
+        android:layout_alignTop="@+id/seek_bar_angle_b"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
         />
@@ -77,7 +77,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/label_result"
         android:layout_marginTop="25dp"
-        android:layout_below="@+id/seekbar_angle_b"
+        android:layout_below="@+id/seek_bar_angle_b"
         android:layout_alignParentStart="true"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
 
