@@ -2,6 +2,8 @@
 
 An example Android project showcasing mutation testing set up with [PIT](http://pitest.org/) and [Robolectric](http://robolectric.org/).
 
+This project is part of a blog post about mutation testing in Android [on the Trifork blog](http://blog.trifork.com/2016/09/07/adequacy-of-android-unit-tests/).
+
 ## UI
 
 ![Imgur](http://i.imgur.com/HCO5ShV.png)
